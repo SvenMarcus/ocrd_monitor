@@ -13,13 +13,12 @@ WORKSPACE_DIR = Path("tests") / "workspaces"
 
 def create_settings() -> Settings:
     return Settings(
+        monitor_db_connection_string="",
         ocrd_browser=OcrdBrowserSettings(
             workspace_dir=WORKSPACE_DIR,
             port_range=(9000, 9100),
-            db_connection_string="",
         ),
         ocrd_controller=OcrdControllerSettings(
-            job_dir=JOB_DIR,
             host="",
             user="",
         ),
